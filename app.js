@@ -15,3 +15,10 @@ store.dispatch(createTask('watch goldfish'));
 
 console.log('Redux Store: ')
 console.log(store.getState())
+
+store.dispatch(deleteTask(0));
+store.dispatch(deleteTask(1));
+
+console.log("Updated Redux Store: ");
+console.log(store.getState());
+
