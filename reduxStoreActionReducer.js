@@ -12,7 +12,20 @@ const RESET_TASK_LIST = 'RESET_TASK_LIST';
 //since you invoke the createStore method with the taskRseducer, you need to make the tasksReducer first 
 //note this project uses an array to store the tasks instead of an object to make it easier to delete a positional task
 const tasksReducer = (state = [], action) => {
-    //TODO: Set up switch statement to manage actions based on type
+    // a switch statement evaluated a case statement based on the action.type
+    switch (action.type) {
+        case CREATE_TASK:
+            const newTask = {
+                message: action.taskMessage,
+            };
+            return [...state, newTask]
+        case DELETE_TASK:
+            const idx
+        case RESET_TASK_LIST:
+
+        default:
+            return state
+    }
 }
 
 
