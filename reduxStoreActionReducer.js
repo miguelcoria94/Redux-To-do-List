@@ -23,7 +23,7 @@ const tasksReducer = (state = [], action) => {
             const idx = action.taskId;
             return [...state.slice(0, idx), ...state.slice(idx + 1)];
         case RESET_TASK_LIST:
-
+            return action.emptyTaskList
         default:
             return state
     }
