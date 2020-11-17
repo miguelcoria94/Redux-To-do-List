@@ -20,7 +20,8 @@ const tasksReducer = (state = [], action) => {
             };
             return [...state, newTask]
         case DELETE_TASK:
-            const idx
+            const idx = action.taskId;
+            return [...state.slice(0, idx), ...state.slice(idx + 1)];
         case RESET_TASK_LIST:
 
         default:
